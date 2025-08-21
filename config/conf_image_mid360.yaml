@@ -1,0 +1,14 @@
+/**:
+  ros__parameters:
+    topic:
+      out: "/image/points"
+      in: "/cloud_registered"
+    azimuth:
+      res_deg: 1.0
+      fov_deg: 360.0
+      min_deg: -180.0
+    elevation:
+      res_deg: 0.6
+      fov_deg: 60.0
+      min_deg: -7.0
+    max_range_m: 10.0
