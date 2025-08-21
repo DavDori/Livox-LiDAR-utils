@@ -30,13 +30,10 @@ It includes nodes for converting, visualizing, saving, and extracting features f
 ### 🔁 `livox_renoise_node`
 - **Description**: Add white Gaussian noise on the Livox measurements.
 - **Parameter**: 
-    - `topic.in`: Topic to subscribe to
-    - `topic.out`: Topic of the message after conversion
-    - `enable_lightweight`: condidered only when not using `override_line`, it publishes the point cloud with fields `xyz` instead of `xyzitlt`
-    - `override_line`: When `false` uses the point cloud field `ring`, when `true` the ring number is computed with the following parameters
-    - `elevation.fov_deg`: vertical field of view of the LiDAR
-    - `elevation.min_deg`: vertical minimum angle of the LiDAR
-    - `num_scan_lines`: number of rings 
+    - `topic.in`: Topic of the point cloud to subscribe to
+    - `topic.out`: Topic of the point cloud after renoise
+    - `sigma.range_m`: standard deviation of the noise on the range mesurement [m]
+    - `sigma.angle_deg`: standard deviation of the noise on the angle mesurement [deg]
 - **Use Case**: Useful for testing robustness of algorithms dependent on Livox LiDARs.
 
 ---
